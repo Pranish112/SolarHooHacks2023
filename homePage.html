@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Time Table</title>
+</head>
+
+<body>
+    <script src="./script.js"></script>
+
+    <header>
+    	<nav>
+    	
+    		<a class="navbar-brand" href="finalHome.html">
+      			<div class="logo-image">
+           			<img src="Images/logo.png" class="img-fluid">
+      			</div>
+			</a>
+        	<ul>
+            	<li><a id = "home" href="finalHome.html">Home</a></li>
+                <li><a id = "time-table" href="homePage.html">Schedule</a></li>
+                <li><a id = "homework" href="to-do.html">Checklist</a></li>
+                
+            </ul>
+       </nav>
+    </header>
+	
+	<h1 id = "one" class = "timer">Time Left Until Next Class</h1>
+	
+	
+	<p id="demo" class = "countdown"></p>
+	
+	<br>
+	
+	<h1 id = "two" class = "timer"> Your Schedule </h1>
+	
+	</br>
+	
+	<table class = "table">
+		<tr>
+            <td align="center" height="50"
+                width="100"><br>
+                <b></b></br>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>I<br>9:30-10:20</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>II<br>10:20-11:10</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>III<br>11:10-12:00</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>12:00-12:40</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>IV<br>12:40-1:30</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>V<br>1:30-2:20</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>VI<br>2:20-3:10</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>VII<br>3:10-4:00</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Monday</b></td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Mat</td>
+            <td align="center" height="50">Che</td>
+            <td rowspan="6" align="center" height="50">
+                <h2>L<br>U<br>N<br>C<br>H</h2>
+            </td>
+            <td colspan="3" align="center"
+                height="50">LAB</td>
+            <td align="center" height="50">Phy</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Tuesday</b>
+            </td>
+            <td colspan="3" align="center"
+                height="50">LAB
+            </td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Che</td>
+            <td align="center" height="50">Mat</td>
+            <td align="center" height="50">SPORTS</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Wednesday</b>
+            </td>
+            <td align="center" height="50">Mat</td>
+            <td align="center" height="50">phy</td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Che</td>
+            <td colspan="3" align="center"
+                height="50">LIBRARY
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Thursday</b>
+            </td>
+            <td align="center" height="50">Phy</td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Che</td>
+            <td colspan="3" align="center"
+                height="50">LAB
+            </td>
+            <td align="center" height="50">Mat</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Friday</b>
+            </td>
+            <td colspan="3" align="center"
+                height="50">LAB
+            </td>
+            <td align="center" height="50">Mat</td>
+            <td align="center" height="50">Che</td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Phy</td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Saturday</b>
+            </td>
+            <td align="center" height="50">Eng</td>
+            <td align="center" height="50">Che</td>
+            <td align="center" height="50">Mat</td>
+            <td colspan="3" align="center"
+                height="50">SEMINAR
+            </td>
+            <td align="center" height="50">SPORTS</td>
+        </tr>
+        
+        
+	</table>
+	
+	<br>
+	
+    
+</body>
+
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+
+</script>
+
+</html>

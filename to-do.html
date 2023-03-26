@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do</title>
+</head>
+
+<body>
+    <script src="./script.js"></script>
+
+    <header>
+    	<nav>
+    		<a class="navbar-brand" href="finalHome.html">
+      			<div class="logo-image">
+           		<img src="Images/logo.png" class="img-fluid">
+      			</div>
+			</a>
+        	<ul>
+            	<li><a id = "finalHome" href="home.html">Home</a></li>
+                <li><a id = "time-table" href="homePage.html">Schedule</a></li>
+                <li><a id = "homework" href="to-do.html">Checklist</a></li>
+                
+            </ul>
+       </nav>
+    </header>
+	
+	
+	<h1 class = "timer"> Your To-Do List </timer>
+	
+	<div class="contain">
+    	<div id="newtask">
+        	<input type="text" placeholder="Add Tasks">
+        	<button id="push">Add</button>
+    	</div>
+    <div id="tasks"></div>
+    
+</body>
+
+
+<script>
+
+document.querySelector('#push').onclick = function(){
+    if(document.querySelector('#newtask input').value.length == 0){
+        alert("Kindly Enter Task Name!!!!")
+    }
+
+    else{
+        document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+                <span id="taskname">
+                    ${document.querySelector('#newtask input').value}
+                </span>
+                <button class="delete">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </div>
+        `;
+
+        var current_tasks = document.querySelectorAll(".delete");
+        for(var i=0; i<current_tasks.length; i++){
+            current_tasks[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+    }
+}
+</script>
+
+</html>
